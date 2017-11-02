@@ -2,16 +2,38 @@
   <head>
     <title>style標籤</title>
     <style>
+      /* 針對標籤的樣式, 影響範圍大 */
+      h2 {
+        color: blue;
+      }
+
+      span {
+        font-style: italic;
+        color: red;
+      }
+
+      /* class 樣式，影響範圍中 */
+      .dark-red-color {
+        color: darkblue;
+        font-size: 30px;
+      }
+
+      /* 標籤+class 樣式，影響範圍更小 */
+      span.dark-red-color {
+        color: green;
+      }
+
     </style>
   </head>
   <body>
     <a href="index.html">回首頁</a>
     <h2>style標籤</h2>
+    <h2>fkjdslkfjsdkl</h2>
     <p>style標籤可以定義 class，然後與其套用，style標籤要寫在 head 標籤裡</p>
     <ul>
       <li><span>lorem</span></li>
       <li><span>lorem</span></li>
-      <li><span>lorem</span></li>
+      <li><span class="dark-red-color" style="color: pink;">lorem</span></li>
     </ul>
   </body>
 </html>
