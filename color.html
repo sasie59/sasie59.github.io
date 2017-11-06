@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>色碼</title>
+    <link rel="stylesheet" href="website.css">
+    <style>
+
+      .text-white { color: white; }
+
+      /* 等同 #000000 */
+      .bg-black { background-color: rgb(0, 0, 0); }
+
+      /* 等同 #ffffff */
+      .bg-white { background-color: rgb(255, 255, 255); }
+
+      /* 等同 #ff0000 */
+      .bg-red { background-color: rgb(255, 0, 0); }
+
+      /* 等同 #960000 */
+      .bg-coffee { background-color: rgb(150, 0, 0); }
+
+      /* 等同 #320000 */
+      .bg-darkcoffee { background-color: rgb(50, 0, 0); }
+
+      /* 等同 #00ff00 */
+      .bg-green { background-color: rgb(0, 255, 0); }
+
+      /* 等同 #0000ff */
+      .bg-blue { background-color: rgb(0, 0, 255); }
+
+      /* 等同 #ffff00 */
+      .bg-yellow { background-color: rgb(255, 255, 0); }
+
+      /* 等同 #00ffff*/
+      .bg-aqua { background-color: rgb(0, 255, 255); }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">回首頁</a>
+    <h2>色碼</h2>
+    一般來說，色碼有三種宣告方式
+    <ul>
+      <li>名稱式: 像是 red, green, blue, pink ...等，可閱
+        <a href="https://www.w3schools.com/colors/colors_names.asp">這邊</a>
+      </li>
+      <li>
+        RGB式: 給予R(紅)、G(綠)、B(藍)來決定顏色
+        每個數值範圍從 0 到 255 <br>
+        例如：
+        <ul>
+          <li><span class="bg-black text-white">黑色</span></li>
+          <li><span class="bg-white">白色</span></li>
+          <li><span class="bg-red">紅色</span></li>
+          <li><span class="bg-coffee text-white">咖啡色</span></li>
+          <li><span class="bg-darkcoffee text-white">深咖啡色</span></li>
+          <li><span class="bg-green">綠色</span></li>
+          <li><span class="bg-blue text-white">藍色</span></li>
+          <li><span class="bg-yellow">黃色</span></li>
+          <li><span class="bg-aqua">青色</span></li>
+        </ul>
+      </li>
+      <li>
+        16進位式: 使用 #rrggbb 格式代表其色，# 為固定碼
+        rr與gg與bb分別代表：紅、綠、藍的16進位值。
+        每個數值從 00 到 ff
+        <ul>
+          <li><span class="bg-black text-white">#000000 = 黑色</span></li>
+          <li><span class="bg-white">#ffffff = 白色</span></li>
+          <li><span class="bg-red">#ff0000 = 紅色</span></li>
+          <li><span class="bg-coffee text-white">#960000 = 咖啡色</span></li>
+          <li><span class="bg-darkcoffee text-white">#320000 = 深咖啡色</span></li>
+          <li><span class="bg-green">#00ff00 = 綠色</span></li>
+          <li><span class="bg-blue text-white">#0000ff = 藍色</span></li>
+          <li><span class="bg-yellow">#ffff00 = 黃色</span></li>
+          <li><span class="bg-aqua">#00ffff = 青色</span></li>
+        </ul>
+      </li>
+    </ul>
+    <!--
+      目標: 試著定義
+        1. 試著找出紫色
+        2. 試著找出粉紅色
+        3. 試著找出灰色
+    -->
+  </body>
+</html>
