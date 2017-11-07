@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排版類</title>
+    <link rel="stylesheet" href="website.css">
+    <style>
+      .high-light {
+        font-weight: bold;
+        color: rgb(162, 17, 47);
+      }
+
+      .bg-yellow {
+        background-color: rgb(242, 234, 155);
+      }
+
+      .my-margin-bottom {
+        margin-bottom: 20px;
+      }
+
+      .my-margin-right {
+        margin-right: 20px;
+      }
+
+      .my-margin-top {
+        margin-top: 30px;
+      }
+
+      .my-margin-left {
+        margin-left: 20px;
+      }
+
+      .margin-upbottom-leftright {
+        margin: 10px 20px;
+      }
+      .margin-up-leftright-bottom {
+        margin: 20px 30px 10px;
+      }
+
+      .margin-up-right-bottom-left {
+        margin: 20px 30px 10px 40px;
+      }
+
+      .margin-all {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">回首頁</a>
+    <h2>排版類</h2>
+    <h3>margin</h3>
+    Marin 就是外距
+    <ul>
+      <li><span class="high-light">margin-top</span> 代表與上面的距離</li>
+      <li><span class="high-light">margin-right</span> 代表與右邊的距離</li>
+      <li><span class="high-light">margin-bottom</span> 代表與下面的距離</li>
+      <li><span class="high-light">margin-left</span> 代表與左邊的距離</li>
+    </ul>
+
+    <div class="my-margin-bottom bg-yellow">距離下面20px</div>
+
+    <span class="my-margin-right bg-yellow">距離右邊20px</span>
+    <span class="bg-yellow">文字文字</span>
+
+    <div class="my-margin-top bg-yellow">距離上面30px</div>
+
+    <span class="bg-yellow">文字文字</span>
+    <span class="my-margin-left bg-yellow">距離左邊20px</span>
+
+    <div class="margin-upbottom-leftright bg-yellow">上下距10px, 左右距20px</div>
+    <div class="margin-up-leftright-bottom bg-yellow">上距20px, 左右距30px, 下距10px</div>
+
+    <div class="margin-up-right-bottom-left bg-yellow">上20右30下10左40</div>
+    <div class="margin-all bg-yellow">全距50px</div>
+    <!--
+      目標: 試著定義
+        1. 定義一個或多個 class,讓一div 上距 10px, 右距 20px, 下距30px, 左距 40px
+    -->
+  </body>
+</html>
