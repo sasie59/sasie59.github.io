@@ -66,8 +66,21 @@
       .my-padding-left {
         padding-left: 10px;
       }
+
       .my-padding-all {
         padding: 20px 50px;
+      }
+
+      .display-inline {
+        display: inline;
+      }
+
+      .display-block {
+        display: block;
+      }
+
+      .display-none {
+        display: none;
       }
     </style>
   </head>
@@ -113,9 +126,13 @@
     <span class="bg-yellow my-padding-right">內右距10px</span> <br>
     <div class="bg-yellow my-padding-bottom">內下距10px</div> <br>
     <div class="bg-yellow my-padding-left">內左距10px</div> <br>
-
-    <!-- 請定義一個上距20px 下距也20px 左右距 50px 的class套用在一個 span 上 -->
     <span class="my-padding-all bg-yellow">TEST1</span>
     <span class="my-padding-all">fdfs</span>
+    <hr>
+    <h3>display</h3>
+    呈現方式
+    <div class="bg-yellow display-inline">display-line</div>
+    <span class="bg-yellow display-block display-none">display-block</span>
+    <div class="bg-yellow">display-none</div>
   </body>
 </html>
