@@ -50,11 +50,31 @@
       .margin-top-right-down-left {
         margin: 10px 20px 30px 40px;
       }
+
+      .my-padding-top {
+        padding-top: 10px;
+      }
+
+      .my-padding-right {
+        padding-right: 100px;
+      }
+
+      .my-padding-bottom {
+        padding-bottom: 10px;
+      }
+
+      .my-padding-left {
+        padding-left: 10px;
+      }
+      .my-padding-all {
+        padding: 20px 50px;
+      }
     </style>
   </head>
   <body>
     <a href="index.html">回首頁</a>
     <h2>排版類</h2>
+
     <h3>margin</h3>
     Margin 就是外距
     <ul>
@@ -79,10 +99,23 @@
 
     <div class="margin-up-right-bottom-left bg-yellow">上20右30下10左40</div>
     <div class="margin-all bg-yellow">全距50px</div>
-    <!--
-      目標: 試著定義
-        1. 定義一個或多個 class,讓一div 上距 10px, 右距 20px, 下距30px, 左距 40px
-    -->
     <div class="bg-yellow margin-top-right-down-left">上距 10px, 右距 20px, 下距30px, 左距 40px</div>
+    <hr>
+    <h3>padding</h3>
+    padding 意思就是內距
+    <ul>
+      <li><span class="high-light">padding-top</span> 代表與內距上面的距離</li>
+      <li><span class="high-light">padding-right</span> 代表與內距右邊的距離</li>
+      <li><span class="high-light">padding-bottom</span> 代表與內距下面的距離</li>
+      <li><span class="high-light">padding-left</span> 代表與內距左邊的距離</li>
+    </ul>
+    <div class="bg-yellow my-padding-top">內上距10px</div> <br>
+    <span class="bg-yellow my-padding-right">內右距10px</span> <br>
+    <div class="bg-yellow my-padding-bottom">內下距10px</div> <br>
+    <div class="bg-yellow my-padding-left">內左距10px</div> <br>
+
+    <!-- 請定義一個上距20px 下距也20px 左右距 50px 的class套用在一個 span 上 -->
+    <span class="my-padding-all bg-yellow">TEST1</span>
+    <span class="my-padding-all">fdfs</span>
   </body>
 </html>
