@@ -21,6 +21,12 @@
         border-right: 1px blue solid;
       }
 
+      .border-4 {
+        border: 1px gray solid;
+        width: 200px;
+        height: 100px;
+      }
+
       .width-1 {
         width: 300px;
       }
@@ -61,6 +67,11 @@
       .min-height-1 {
         height: 1px;
         min-height: 300px;
+      }
+
+      .max-min {
+        max-width: 300px
+        min-height: 100px
       }
 
     </style>
@@ -113,5 +124,7 @@
         1. 設定一個灰色邊框的div，線大小為1，寬度為200，高度為 100
         2. 設定一個div，它的寬度最多不會超過 300px，最小不會低於100px
     -->
+    <div class="border-4">灰色邊框 線1 寬200 高100</div>
+    <div class="max-min border-2">寬度最多不會超過 300px，最小不會低於100px</div>
   </body>
 </html>
