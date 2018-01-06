@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 這兩不要動它
+    var list = Array(5).fill(0);
+    list = list.map(() => ~~(Math.random() * 10));
+    console.warn(list);
+    //題目一，印出list裡的所有雙數
+    // for (var i = 0; i < list.length; i++) {
+    //   if(list[i] % 2 === 0){
+    //     console.log(list[i]);
+    //   }
+    // }
+    //題目二，累加list加的總數
+    // var sum = 0;
+    // for (var i = 0; i < list.length; i++) {
+    //   sum = sum + list[i];
+    // }
+    // console.log(sum);
+
+    //題目三，把 list 倒過來印
+    // list = [a, b, c, d...., x, y, z] => n
+    //         0  1  2  3 ...,n-3, n-2, n-1
+    // console.log(list.length);
+    // for (var i = list.length - 1; i >= 0; i--) {
+    //     console.log(list[i]);
+    // }
+
+
+    //題目四，印出 list 第一個內容*1, 第二個內容*2....
+    // for (var i = 0 ; i < list.length; i++) {
+    //   // console.log(list[i]);
+    //   console.log(list[i] * (i + 1));
+    //   // console.log(list[i] * (i + 1));
+    // }
+
+    //題目五, 印出list 相有內容相乘的結果
+    var sum = list[0];
+    for (var i = 1; i < list.length; i++) {
+      sum = sum * list[i];
+    }
+    console.log(sum);
+  </script>
+</body>
+</html>
