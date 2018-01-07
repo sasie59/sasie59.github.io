@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // var stars = "";
+    // for (var i = 0; i < 5; i++) {
+    //   stars = stars + "*\n";
+    // }
+    // console.log(stars);
+
+    //星號問題
+    //題目一：輸入 n 印出 n 個 *
+    // n = 3, ***
+    // n = 5, *****
+    //題目二：輸入 n 印出 n! 個 *
+    /*
+      n = 1
+      *
+      n = 2
+      *
+      **
+      n = 3
+      *
+      **
+      ***
+      i = 3,
+      j = 3,
+      stars
+      *
+      **
+      ***
+
+
+    */
+
+    var n = 5;
+    var stars = "";
+    for (var i = 0; i < n; i++) {
+      for (var j = 0; j <= i; j++) {
+        stars = stars + "*";
+      }
+      stars = stars + "\n";
+    }
+    console.log(stars);
+
+    //題目三：輸入 n 得蝴蝶形 *
+    /*
+    n = 1
+    *
+    n = 2
+    **
+    *
+    **
+    n = 3
+    ***
+    **
+    *
+    **
+    ***
+    */
+
+  </script>
+</body>
+</html>
