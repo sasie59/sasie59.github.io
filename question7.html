@@ -15,14 +15,61 @@
     // [1, 2, 3]
     // 3
     // [3, 6, 9]
+    // var a = [2, 3, 5, 8, 9];
+    // var n = 3;
+    // for (var i = 0; i < a.length; i++) {
+    //   a[i] = a[i] * n;
+    // }
+    // console.log(a);
+
+
 
     //輸入 n, 取得 1 - 2 + 3 - 4 .... n
     //的結果（加分選項：盡可能減少迴圈次數）
+    // 1 -> 1
+    // 2 -> -1 -n    /2
+    // 3 -> 2 (n + 1)/2
+    // 4 -> -2
+    // 5 -> 3
+    // 6 -> -3
+    // 7 -> 4
+
+    // var n = 4;
+    // var result = (n % 2 ? n + 1  : -n) / 2;
+    // console.log(result);
+
+    // if(n % 2 === 0) {
+    //   console.log(-n/2);
+    // } else {
+    //   console.log((n+1)/2);
+    // }
+
+    // var n = 5;
+    // var sum = 1;
+    // for (var i = 2; i <= n; i++) {
+    //   sum += (i % 2? i: -i);
+    //   // sum += (i % 2 === 0 ? -i: i);
+    //   // if (i % 2 === 0) {
+    //   //   sum = sum - i;
+    //   // }
+    //   // else {
+    //   //   sum = sum + i;
+    //   // }
+    // }
+    // console.log(sum);
 
     // 輸入 n (1~365)
     // 輸出 n 幾月份
     // [31, 28, ...]
-    // n
+    var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    //           31, 59, 90,120,
+    var day = 60;
+    var sum = 0;
+    for (i = 0; i < month.length;i++) {
+      sum = sum + month[i];
+      if(day < sum) break;
+    }
+    console.log(i + 1);
   </script>
 </body>
 </html>
