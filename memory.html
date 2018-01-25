@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var arr = [1, 2, 3];
+    var arr2 = arr;
+    console.log("arr ->", arr);
+    arr[0] = 'a';
+    console.log('把第一個元素換成 a');
+    console.log("arr ->", arr);
+    console.log('看一下 arr2');
+    console.log("arr2 ->", arr2);
+
+    /**
+      在過去，我們使用某變數，就會把變數存在電腦的「某個」記憶體區
+      舉例：a = 1, 就是把 1 存在記憶體中的「某一區」
+
+          ...       1       ...    內容
+      |--ef8a--|--ef8b--|--ef8c--| 記憶體
+                    a              變數名
+
+      但若存的是「一個」陣列 或 物件，那記憶體存的就會是另一個記憶體區段而非該值
+      arr = [1, 2, 3], 就是把 arr 的記憶體區段存在記憶體的某一區
+
+         ef8a <-- 記憶體位址            1        2        3     內容
+      |--6ebf--|.................|--ef8a--|--ef8b--|--ef8c--| 記憶體
+          a                         a[0]     a[1]     a[2]    變數名
+
+          ef8a <-- 記憶體位址          ef8a    內容
+       |--6ebf--|.................|--6ecf--| 記憶體
+           a                           b     變數名
+
+     */
+  </script>
+</body>
+</html>
