@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 把方法定義在 物件 裡面，之後可以直接使用
+    var cat1 = {
+      name: "空空",
+      meow: function() {
+        return "meow~ meow~";
+      },
+      hello: function(name) { //← 也可以帶參數進來
+        return "hello, " + name;
+      }
+    }
+    console.log(cat1.name + ":");
+    console.log(cat1.meow());
+    console.log(cat1.hello("士揚"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 一般宣告function的方式，存在於整個scope，無順序問題
+    function func1() {
+      return "func1";
+    }
+
+    console.log(func1());
+
+    // 用變數的方式宣告function，存在於宣告之後，有順序問題
+    var func2 = function() {
+      return "func2";
+    }
+
+    console.log(func2());
+  </script>
+</body>
+</html>

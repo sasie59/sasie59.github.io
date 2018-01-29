@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var aObj = {
+      name: "A物件",
+      method: function() {
+        console.log(bObj.method());
+        return this;
+      }
+    }
+
+    var bObj = {
+      name: "B物件",
+      method: function() {
+        return this;
+      }
+    }
+
+    console.log(aObj.method());
+    console.log(bObj.method());
+
+  </script>
+</body>
+</html>
