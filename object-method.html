@@ -12,16 +12,29 @@
     // 把方法定義在 物件 裡面，之後可以直接使用
     var cat1 = {
       name: "空空",
+      age: 6,
       meow: function() {
         return "meow~ meow~";
       },
       hello: function(name) { //← 也可以帶參數進來
         return "hello, " + name;
+      },
+      changeAttr: function(attr, value) {
+        this[attr] = value;
       }
     }
+
     console.log(cat1.name + ":");
     console.log(cat1.meow());
     console.log(cat1.hello("士揚"));
+    console.log(cat1.hello("士偉"));
+    cat1.changeAttr("age", 88);
+    console.log(cat1.age);
+    cat1.changeAttr("name", "三百");
+    console.log(cat1.name);
+
+    cat1.changeAttr("name", "許素英");
+    console.log(cat1.name);
   </script>
 </body>
 </html>

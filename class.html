@@ -8,11 +8,35 @@
 </head>
 <body>
   <script>
-  class Animal {
-    constructor(name) {
+  //dry = dont repeat yourself
+  class Cat {
+    constructor(name, age) {
       this.name = name;
+      this.age = age;
     }
-  };
+
+    meow() {
+      return "meow~ meow~";
+    }
+
+    hello(name) { //← 也可以帶參數進來
+      return "hello, " + name;
+    }
+
+    changeAttr(attr, value) {
+      this[attr] = value;
+    }
+  }
+
+  var cat1 = new Cat("三百", 7);
+  var cat2 = new Cat("空空", 6);
+  var cat3 = new Cat("素英", 60);
+
+  console.log(cat1.name, cat1.age);
+  console.log(cat1.meow());
+  console.log(cat2.name, cat2.age);
+  console.log(cat1.meow());
+  console.log(cat3.name, cat3.age);
   </script>
 </body>
 </html>
