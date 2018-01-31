@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Animal {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+
+    Animal.prototype.hello = function(name) {
+      return "hello, " + name;
+    }
+
+
+    class Cat extends Animal {
+      constructor(name, age, color) {
+        super(name, age);
+        this.color = color;
+      }
+    }
+
+    Cat.prototype.meow = function() {
+      return "meow";
+    }
+
+    class Dog extends Animal {
+      constructor(name, age, size) {
+        super(name, age);
+        this.size = size;
+      }
+    }
+
+    Dog.prototype.woon = function() {
+      return "woon";
+    }
+
+    Dog.prototype.hello = function() {
+      return "哈囉";
+    }
+
+
+    // var animal1 = new Animal("動物1", 10);
+    // console.log(animal1.hello());
+
+    var cat1 = new Cat("空空", 5, 'black');
+    console.log(cat1.hello("士揚"));
+    console.log(cat1.meow());
+
+    var dog1 = new Dog("小白", 20, 'large');
+    console.log(dog1.name);
+    console.log(dog1.age);
+    console.log(dog1.hello("士偉"));
+    console.log(dog1.woon());
+  </script>
+</body>
+</html>
