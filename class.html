@@ -14,19 +14,19 @@
       this.name = name;
       this.age = age;
     }
-
-    meow() {
-      return "meow~ meow~";
-    }
-
-    hello(name) { //← 也可以帶參數進來
-      return "hello, " + name;
-    }
-
-    changeAttr(attr, value) {
-      this[attr] = value;
-    }
   }
+
+  Cat.prototype.meow = function() {
+    return "meow~ meow~";
+  };
+
+  Cat.prototype.hello = function(name) {
+    return "hello, " + name;
+  };
+
+  Cat.prototype.changeAttr = function(attr, value) {
+    this[attr] = value;
+  };
 
   var cat1 = new Cat("三百", 7);
   var cat2 = new Cat("空空", 6);
