@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Student {
+      constructor(sid, name) {
+        this.sid = sid;
+        this.name = name;
+      }
+
+      yo() {
+        return "又!";
+      }
+
+      myNameIs() {
+         return "我的名字是" + this.name;
+      }
+
+      // 靜態方法屬於 class 自有的，非 New 出來的物件的
+      static basicSuit() {
+        return "帽子、制服跟鞋子"
+      }
+
+      static responsibility() {
+        return "唸書";
+      }
+    }
+
+    var student1 = new Student("s9223021", "謝士揚");
+    console.log(student1.name);
+    console.log(student1.yo());
+    console.log(student1.myNameIs());
+
+    console.log(Student.basicSuit());
+    console.log(Student.responsibility());
+  </script>
+</body>
+</html>

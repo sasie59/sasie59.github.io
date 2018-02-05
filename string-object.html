@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 取得字串長度
+    var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZA";
+    // var txt = new String("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    console.log("txt內容是:", txt);
+    console.log("txt長度為: ", txt.length);
+
+    // 找尋其中字串位置 indexOf
+    console.log("找CDE，回傳: ", txt.indexOf("CDE"));
+    console.log("找Z，回傳: ", txt.indexOf("Z"));
+    console.log("找ZZ，回傳: ", txt.indexOf("ZZ"));
+
+    console.log("從左開始找A，得: ", txt.indexOf("A"));
+    console.log("從左第3位開始找A，得: ", txt.indexOf("A", 3));
+    console.log("從右開始找A，得: ", txt.lastIndexOf("A")); // 從右開始找
+
+    // 截取其中字串 slice (by index)
+    console.log("從左第0位抓到第1位", txt.slice(0, 1));
+    console.log("從左第0位抓到第2位", txt.slice(0, 2));
+    console.log("從左第1位抓到第2位", txt.slice(1, 2));
+    console.log("從左第2位抓到第4位", txt.slice(2, 4));
+
+    console.log("從右第6位抓到第1位", txt.slice(-6, -1));
+
+    console.log("從左第2位開始抓到底", txt.slice(2));
+    console.log("從左第2位開始抓到底", txt.slice(-2));
+
+    // 截取其中字串 substr (by length)
+    console.log("從左第2位開始抓4個字: ", txt.substr(2, 4));
+    console.log("從左第3位開始抓7個字: ", txt.substr(3, 7));
+
+    // 取代字串
+    console.log("把 ABC 取代成 あいう: ", txt.replace("ABC", "あいう"));
+
+    // 變小寫
+    console.log("把 txt 變小寫: ", txt.toLowerCase());
+    console.log("把 xyz 變大寫: ", "xyz".toUpperCase());
+
+    // 取得字串裡第{index}字元
+    console.log("取得 txt 裡 index 為 0 的字元: ", txt.charAt(0));
+    console.log("取得 txt 裡 index 為 1 的字元: ", txt.charAt(1));
+    console.log("也可以使用陣列的方式: ", txt[1]);
+
+    // 切割字元變成陣列
+    console.log("切割字元變成陣列: ", "a,b,c".split(","));
+    console.log("切割字元變成陣列: ", txt.split(""));
+  </script>
+</body>
+</html>

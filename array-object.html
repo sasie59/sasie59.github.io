@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log("fruits: ", fruits);
+
+    //轉字串
+    console.log("fruits.toString(): ", fruits.toString());
+
+    //轉字串並用 ' * ' 取代
+    console.log("fruits.join(' * '): ", fruits.join(" * "));
+
+    // 取出最後1個元素，並從 fruit 拿出來。
+    console.warn("取出最後1個元素，並從 fruit 拿出來");
+    console.log("fruits.pop(): ", fruits.pop());
+    console.log("fruits: ", fruits);
+
+    // 加入元素在最後面
+    console.warn("加入元素在最後面");
+    fruits.push("Kiwi")
+    console.log("fruits.push('Kiwi'): ");
+    console.log("fruits: ", fruits);
+
+    // 取出第1個元素，並從 fruit 拿出來。
+    console.warn("取出第1個元素，並從 fruit 拿出來");
+    console.log("fruits.shift(): ", fruits.shift());
+    console.log("fruits: ", fruits);
+
+    // 加入元素在最前面
+    console.warn("加入元素在最前面");
+    fruits.unshift("Lemon")
+    console.log("fruits.unshift('Lemon'): ");
+    console.log("fruits: ", fruits);
+
+    // 拼接陣列裡的元素
+    console.warn("拼接陣列裡的元素");
+    fruits = ["Banana", "Orange", "Apple", "Mango"];
+    console.log("fruits: ", fruits);
+    fruits.splice(2, 0, "Lemon", "Kiwi")
+    console.log("在位置2插入2元素，並刪除 0 個元素: ", fruits);
+
+    fruits.splice(3, 1);
+    console.log("在位置3插入0個元素，刪除1個元素:");
+    console.log("fruits: ", fruits);
+
+    // 合拼陣列
+    var myGirls = ["Cecilie", "Lone"];
+    var myBoys = ["Emil", "Tobias", "Linus"];
+    console.warn("合拼陣列");
+    console.log("myGirls: ", myGirls);
+    console.log("myBoys: ", myBoys);
+    console.log("myGirls.concat(myBoys): ", myGirls.concat(myBoys));
+
+    // 取出陣列
+    console.warn("取出陣列");
+    console.log("fruits: ", fruits);
+    console.log("fruits.slice(1, 4): ", fruits.slice(1, 4));
+    console.log("fruits.slice(2): ", fruits.slice(2));
+  </script>
+</body>
+</html>

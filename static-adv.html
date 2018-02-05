@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Student {
+      constructor(sid, name) {
+        this.sid = sid;
+        this.name = name;
+      }
+
+      yo() {
+        return "又!";
+      }
+
+      myNameIs() {
+         return "我的名字是" + this.name;
+      }
+
+      static new(sid, name) {
+        var stu = new Student(sid, name);
+        Student.member[Student.counter] = stu;
+        Student.counter++;
+        console.log("目前有" + Student.counter + "位學生");
+        return stu;
+      }
+    }
+
+    Student.counter = 0;
+    Student.member = [];
+
+    var student1 = Student.new("s9223021", "謝士揚");
+    console.log(student1.name);
+    console.log(student1.yo());
+    console.log(student1.myNameIs());
+
+    Student.new("s9223022", "謝士偉");
+    Student.new("s9223023", "三百");
+    Student.new("s9223024", "空空");
+
+    console.log("學生資料庫裡有" + Student.counter + "位學生");
+    console.log("第一位學生是" + Student.member[0].name);
+  </script>
+</body>
+</html>
