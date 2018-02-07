@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var date1 = new Date();
+    console.warn("使用 new Date() 產生 date1變數，時間為現在時間");
+    console.log("取得現在日期: ", date1);
+    console.log("取得現在年份: ", date1.getFullYear());
+    console.log("取得現在年份: ", date1.getFullYear());
+    console.log("取得現在月份(index): ", date1.getMonth());
+    console.log("取得現在日期: ", date1.getDate());
+    console.log("取得現在小時: ", date1.getHours());
+    console.log("取得現在分鐘: ", date1.getMinutes());
+    console.log("取得現在秒: ", date1.getSeconds());
+
+    var date2 = new Date("2017-01-29");
+    console.warn("使用 new Date('2017-01-29') 產生 date2 變數，時間為2017-01-29");
+    console.log("取得日期: ", date2);
+
+    var date3 = new Date("2017-01-29 13:00:00");
+    console.warn("使用 new Date('2017-01-29 13:00:00') 產生 date3 變數，時間為2017-01-29 13:00:00");
+    console.log("取得日期: ", date3);
+  </script>
+</body>
+</html>
