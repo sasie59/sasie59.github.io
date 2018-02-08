@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  遇 debugger 指令時網頁會暫停運作,
+  可按 F10 逐步執行 或
+  按 F8 恢復執行
+  <script>
+    var sum = 0;
+    debugger;
+    for (var i = 0; i < 5; i++) {
+      sum = sum + i;
+      console.log("sum 目前是", sum);
+    }
+  </script>
+</body>
+</html>
