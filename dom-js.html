@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>與標籤的互動</title>
+  </head>
+  <body>
+    <button onClick="showTime()">現在時間</button>
+    <div id="time">time</div>
+    <button onClick="changeBGColor('pink')">背景變粉紅色</button> <br>
+    <button onClick="changeBGColor('lightblue')">背景變亮藍色</button> <br>
+    <button onClick="changeBGColor()">背景變隨機色</button> <br>
+    <button onClick="goURL('http://www.google.com')">去Google</button> <br>
+    <button onClick="goURL('http://tw.yahoo.com')">去Yahoo</button> <br>
+    <!-- 不過如果像這種按下去就要去某個網站的用法，還不如直接用 a 標籤 -->
+
+    
+  </body>
+
+  <script>
+
+    function showTime() {
+      document.getElementById('time').innerText = new Date();
+    }
+
+    function changeBGColor(color) {
+      /**
+       * 這裡的用法很像 css 的 background-color
+       * 但在JS裡 "-" 是減法，不能當作屬性名
+       * 故改用駝峰式命名去指定style屬性
+       */
+      if(color) {
+        document.body.style.backgroundColor = color;
+      } else {
+        document.body.style.backgroundColor = randomRGB();
+      }
+    }
+
+    // 取得 min ~ max 的隨機整數
+    function randomRGB() {
+      const min = 0;
+      const max = 256;
+      const color = [];
+      for (var i = 0; i < 3; i++) {
+        color.push(Math.floor(Math.random() * (max - min)) + min);
+      }
+      // color 會是一個陣列，內有3個隨機的正整數，範圍是 0 ~ 255
+      console.log("rgb(" + color.join(',') + ")");
+      return "rgb(" + color.join(',') + ")";
+      // join 之後會變成 r,g,b，所以就會變成 rgb(r,g,b)
+    }
+
+    function goURL(url) {
+      location.href = url;
+    }
+  </script>
+</html>
