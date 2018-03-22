@@ -16,7 +16,7 @@
     <button onClick="goURL('http://tw.yahoo.com')">去Yahoo</button> <br>
     <!-- 不過如果像這種按下去就要去某個網站的用法，還不如直接用 a 標籤 -->
 
-    
+
   </body>
 
   <script>
@@ -44,8 +44,9 @@
       const max = 256;
       const color = [];
       for (var i = 0; i < 3; i++) {
-        color.push(Math.floor(Math.random() * (max - min)) + min);
+        color.push( Math.floor(Math.random() * (max - min)) + min );
       }
+      // color = [r, g, b]
       // color 會是一個陣列，內有3個隨機的正整數，範圍是 0 ~ 255
       console.log("rgb(" + color.join(',') + ")");
       return "rgb(" + color.join(',') + ")";
