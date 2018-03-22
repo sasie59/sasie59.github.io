@@ -17,6 +17,7 @@
     最常見到的事件是 onClick，可綁定在DOM上比方說像這樣： <br>
     <button onClick="clickMe()">按我</button>
     <input id="text" type="text" name="" value="">
+    <input id="text2" type="text" name="" value="">
 
     <div class="box" onMouseover="overMe()" onMouseout="outMe()">box</div>
 
@@ -34,8 +35,9 @@
       }
 
       document.getElementById('text').addEventListener("keyup", upMe);
+      document.getElementById('text2').addEventListener("keyup", upMe);
 
-      function upMe(e) {
+      function upMe(e) { //event
         // 取得文字格裡的文字
         console.warn(e.target.value);
       }
