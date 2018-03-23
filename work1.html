@@ -16,17 +16,21 @@
     -->
     <script>
       function sendText() {
-        document.getElementById("kg").value / Math.pow(document.getElementById("cm".value , 2));
+        var BMI = document.getElementById("kg").value / Math.pow(document.getElementById("cm").value / 100 , 2);
+        document.getElementById("result").innerText = BMI;
       }
       function upMe(e) {
-        if(e.target.value !== "") {
-          document.getElementById("kg", "cm").addEventListener("click", sendText);
+        var kg = document.getElementById("kg").value;
+        var cm = document.getElementById("cm").value;
+        if(kg && cm) {
+          document.getElementById("button").addEventListener("click", sendText);
         }else {
-          document.getElementById("kg", "cm").removeEventListener("click", sendText);
+          document.getElementById("button").removeEventListener("click", sendText);
 
         }
       }
-      document.getElementById("button").addEventListener("keyup", upMe)
+      document.getElementById("kg").addEventListener("keyup", upMe);
+      document.getElementById("cm").addEventListener("keyup", upMe);
     </script>
   </body>
 </html>
