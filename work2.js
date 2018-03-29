@@ -17,4 +17,11 @@ function sendMessage(e) {
   messageName.value = "";
   messageText.value = "";
 }
+function snedMessage(e) {
+  e.preventDefault();
+  const messageName = document.getElementById("name");
+  const messageText = document.getElementById("text");
+  const messageBlock = document.getElementById("message-block");
+}
+document.getElementById("message-form").addEventListener("submit", sendMessage);
 document.getElementById("message-form").addEventListener("submit", sendMessage);
