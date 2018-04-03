@@ -23,6 +23,9 @@
 
       console.log(fib(4)); // 13
       console.log(fib2(4)); // 13
+      console.log(fibn(10));
+      console.log(fibn2(10));
+
 
       /*
       f(4) = f(3) +  f(2)
@@ -32,7 +35,22 @@
                 v      v
           f(1) + f(0)  1
 
+
       */
+      function fibn(n) {
+        var f = [0, 1];
+        for (var i = 2; i <= n; i++) {
+          f[i] = f[i - 1] + f[i - 2];
+        }
+        return f[n]
+      }
+
+      function fibn2(n) {
+        if (n < 2) return n;
+        return fibn2(n - 1) + fibn2(n - 2);
+      }
+
+
     </script>
   </body>
 </html>
