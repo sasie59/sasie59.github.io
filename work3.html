@@ -7,16 +7,52 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="content">content</div>
+    <div id="content">
+      content
+    </div>
     <script>
       var carList = [
-        { brand: "toyota", country: "japan", color: "red" },
-        { brand: "bmw", country: "德國", color: "black" },
-        { brand: "福特", country: "美國", color: "white" },
-        { brand: "honda", country: "japan", color: "orange" },
-        { brand: "Benz", country: "德國", color: "blue" },
+        { brand: "toyota", country: "Japan", color: "red" },
+        { brand: "bmw", country: "German", color: "black" },
+        { brand: "ford", country: "Ａmerica", color: "white" },
+        { brand: "honda", country: "Japan", color: "balck" },
+        { brand: "benz", country: "German", color: "red" },
       ]
+      var filterGermanJapan = function (car) {
+        return ["Japan", "German"].includes(car.country);
+        // return car.country == "Japan" || car.country == "German";
+      }
 
+      var car2Html = function (car) {
+        return (
+          '<div class="car">' +
+            '<h3 calss="brand">' + car.brand + '</h3>' +
+            '<div class="country">' + car.country + '</div>' +
+            '<div class="color">' + car.color + '</div>' +
+          '</div>'
+        );
+      }
+      function filter(arr, fun) {
+        var result = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (fun(arr[i])) {
+            result.push(arr[i]);
+          }
+        }
+        return result;
+      }
+
+      function map(arr, fun) {
+        for (var i = 0; i < arr.length; i++) {
+          arr[i] = fun(arr[i]);
+        }
+        return arr;
+      }
+
+      carList = filter(carList, filterGermanJapan);
+      carList = map(carList, car2Html);
+
+      document.getElementById('content').innerHTML = carList.join("")
       // filter
       // 篩選出德國的車子 或 日本的車子
 
