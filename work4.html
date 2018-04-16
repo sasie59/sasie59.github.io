@@ -21,20 +21,28 @@
           { brand: "minicooper", country: "America", color: "yellow" },
       ];
 
-      carList = carList.filter(function (car) {
-        return ["America", "Japan"].includes(car.country);
-      });
+      function upME(e) {
 
-      carList = carList.map(function (car) {
-        return (
-          '<div class="car">' +
-            '<h2 class="brand">' + car.brand + '</h2>' +
-            '<div class="country">' + car.country + '</div>' +
-            '<div class="color">' + car.color +'</div>' +
-          '</div>'
-        );
-      });
-      document.getElementById("content").innerHTML = carList.join("");
+        const keyword = e.target.value;
+
+        var filterCar = carList.filter(function (car) {
+          return car.color.indexOf(keyword) >= 0 || car.brand.indexOf(keyword) > -1 || car.country.indexOf(keyword) > -1;
+        });
+
+        var content = filterCar.map(function (car) {
+          return (
+            '<div class="car">' +
+              '<h2 class="brand">' + car.brand + '</h2>' +
+              '<div class="country">' + car.country + '</div>' +
+              '<div class="color">' + car.color +'</div>' +
+            '</div>'
+          );
+        });
+        document.getElementById("content").innerHTML = content.join("");
+
+      }
+
+      document.getElementById("keyword").addEventListener("keyup", upME);
     </script>
   </body>
 </html>
