@@ -8,27 +8,44 @@
 </head>
 <body>
   <script>
-    const PI = 3.1415962;
+    // const PI = 3.1415962;
+    const pi = 3.1415962;
     // dry = Don't Repeat Yourself
+    // function add(x, y) {
+    //   return x + y;
+    // }
     function add(x, y) {
       return x + y;
     }
 
-    function multiply(x , y) {
+    // function multiply(x , y) {
+    //   return x * y;
+    // }
+    function multiply(x, y) {
       return x * y;
     }
 
+    // function addAll(array) {
+    //   var result = 0;
+    //   for (var i = 0; i < array.length; i++) {
+    //     result += array[i];
+    //   }
+    //   return result;
+    // }
     function addAll(array) {
       var result = 0;
       for (var i = 0; i < array.length; i++) {
-        result += array[i];
+        result = result + array[i]
       }
       return result;
     }
 
-    console.log(add(4, 4));
-    console.log(multiply(add(4, 4), 9));
-    console.log(addAll([1, 2, 3, 4, 5, 6]));
+    console.log(add(10, 37));
+    console.log(multiply(3, 9));
+    // console.log(multiply(add(4, 4), 9));
+    console.log(multiply(add(7, 8), 2));
+    // console.log(addAll([1, 2, 3, 4, 5, 6]));
+    console.log(addAll([2, 4, 6, 8, 10]));
 
     // console.log(bFunc(1));
     /*
