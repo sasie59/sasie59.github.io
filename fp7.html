@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 在過去我們有很多 加總 陣列裡所有值的題目
+       * 在過去我們會使用 for 然後把項目一一加到 sum 這個變數
+       */
+      var sum = 0;
+      var list = [1, 2, 3, 4, 5];
+      for (var i = 0; i < list.length; i++) {
+        sum += list[i];
+      }
+      console.log("加總結果: ", sum);
+
+      console.warn('----我是分隔線----');
+
+      /**
+       * 使用 reduce 變可簡單做到, sum 每次進來為上次 return 的結果
+       * item 則為每次進來的項目
+       */
+      var result = list.reduce(function(sum, item) {
+        return sum += item;
+      });
+      console.log("加總結果: ", result);
+
+    </script>
+  </body>
+</html>

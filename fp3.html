@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>forEach</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const list = ['a', 'b', 'c', 'd'];
+
+      //在過去，我們要跑過陣列裡的所有項目會用 for，像這樣
+      for (var i = 0; i < list.length; i++) {
+        console.log(list[i]);
+      }
+
+      console.warn('----我是分隔線----');
+
+      // for 可以幫我們做到，但我們還需要定義 i, 撰寫 i ++ 與跳出條件
+      // 使用 forEach 可方便幫我們做到一樣的效果
+      list.forEach(function(item) {
+        console.log(item);
+      });
+
+      // forEach 的概念一樣是丟一個 function 給 forEach
+      // function 跑的次數就看 list 有幾個就跑幾次
+      // 每次帶進來的東西就叫 item，就不用再使用什麼 i 的變數
+    </script>
+  </body>
+</html>

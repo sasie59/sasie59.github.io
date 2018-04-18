@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>every</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * every 會檢查每一個項目 return 是否都是 true
+       * 如果有其中有一個 false, 那 every 的結果就是 false
+       * 概念上很像 and &&
+       */
+      var list1 = [1, 2, 3];
+      var list2 = [3, 4, 5];
+
+      var result1 = list1.every(function(item) {
+        return item > 2;
+      });
+
+      console.log(result1);
+      
+      console.warn('----我是分隔線----');
+
+      var result2 = list2.every(function(item) {
+        return item > 2;
+      });
+      console.log(result2);
+    </script>
+  </body>
+</html>
