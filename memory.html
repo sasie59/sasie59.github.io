@@ -8,14 +8,24 @@
 </head>
 <body>
   <script>
-    var arr = [1, 2, 3];
-    var arr2 = arr;
-    console.log("arr ->", arr);
-    arr[0] = 'a';
-    console.log('把第一個元素換成 a');
-    console.log("arr ->", arr);
-    console.log('看一下 arr2');
-    console.log("arr2 ->", arr2);
+    // var arr = [1, 2, 3];
+    // var arr2 = arr;
+    // console.log("arr ->", arr);
+    // arr[0] = 'a';
+    // console.log('把第一個元素換成 a');
+    // console.log("arr ->", arr);
+    // console.log('看一下 arr2');
+    // console.log("arr2 ->", arr2);
+    var arr1 = [2, 4, 6];
+    var arr2 = arr1;
+    console.log(arr1);
+    arr1[0] = "a";
+    console.log(arr2);
+    arr1[2] = "睡";
+    arr1[1] = "想";
+    console.log(arr2);
+    console.log(arr2[1]);
+
 
     /**
       在過去，我們使用某變數，就會把變數存在電腦的「某個」記憶體區
