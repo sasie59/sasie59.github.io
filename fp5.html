@@ -29,17 +29,22 @@
       });
       console.log(result2);
 
-      /**
-       * 作業：班上有5位同學的考試成績如下：
-       * stuList = [
-       *   { name: "小明", score: 85 },
-       *   { name: "小華", score: 78 },
-       *   { name: "小中", score: 45 },
-       *   { name: "小二", score: 100 },
-       * ];
-       *
-       * 請用 every 算出是否所有人都60分及格
-       */
+
+       // * 作業：班上有5位同學的考試成績如下：
+       stuList = [
+         { name: "小明", score: 85 },
+         { name: "小華", score: 78 },
+         { name: "小中", score: 45 },
+         { name: "小二", score: 100 },
+        ];
+        var result3 = stuList.every(function(stu) {
+          return stu.score >= 60;
+        })
+        console.log(result3);
+        // 請用 every 算出是否所有人都60分及格
+
+
+
     </script>
   </body>
 </html>
