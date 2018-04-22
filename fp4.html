@@ -29,12 +29,27 @@
       console.warn('----我是分隔線----');
 
       // 如果使用 filter，你會得到數個結果:
+      // const filterCar = carList.filter(function(car) {
+      //   return car.country === "Japan";
+      // });
+      // console.table(filterCar);
       const filterCar = carList.filter(function(car) {
-        return car.country === "Japan";
+        return car.country === "America";
       });
       console.table(filterCar);
 
       // 作業：請找出第一台美國的車
+      const firstAmerCar = carList.find(function(car) {
+        return car.country === "America";
+      })
+      console.log(firstAmerCar);
+
+      const firstJapCar = carList.find(function(car) {
+        return car.country === "Japan";
+      })
+      console.log(firstJapCar);
+
+
     </script>
   </body>
 </html>
