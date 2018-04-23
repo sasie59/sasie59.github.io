@@ -29,17 +29,27 @@
       });
       console.log(result2);
 
-      /**
-       * 作業：班上有5位同學的考試成績如下：
-       * stuList = [
-       *   { name: "小明", IQ: 85 },
-       *   { name: "小華", IQ: 78 },
-       *   { name: "小中", IQ: 45 },
-       *   { name: "小二", IQ: 100 },
-       * ];
-       *
-       * 請用 some 算出是否有 IQ 低於 50 的智障
-       */
+
+       // * 作業：班上有5位同學的考試成績如下：
+       stuList = [
+         { name: "小明", IQ: 85 },
+         { name: "小華", IQ: 78 },
+         { name: "小中", IQ: 45 },
+         { name: "小二", IQ: 90 },
+       ];
+       // *
+       // * 請用 some 算出是否有 IQ 低於 50 的智障
+       // * 請用 some 算出是否有 IQ 高於 90 的天才
+       // */
+       var result3 = stuList.some(function(stu) {
+         return stu.IQ < 50;
+       });
+       console.log(result3);
+
+       var result4 = stuList.some(function(stu) {
+         return stu.IQ > 90;
+       });
+       console.log(result4);
     </script>
   </body>
 </html>
