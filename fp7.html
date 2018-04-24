@@ -36,6 +36,20 @@
       });
       console.log(result1);
 
+      // carList 有5台車子，每台車子有車齡還有車牌
+      // 請加總所有車齡，得出一個數字
+      var carList = [
+        { name: 'toyota', age: 10 },
+        { name: 'missan', age: 15 },
+        { name: 'honda', age: 17 },
+        { name: 'ford', age: 21 },
+        { name: 'mitsubishi', age: 19 },
+      ];
+      var result1 = carList.reduce(function(sum, car) {
+        return sum += car.age;
+      }, 0);
+      console.log(result1);
+      //在初始值上加個0 答案被我誤打誤撞就出來了 但不知為什麼
 
     </script>
   </body>
