@@ -50,6 +50,28 @@
       }, 0);
       console.log(result1);
       //在初始值上加個0 答案被我誤打誤撞就出來了 但不知為什麼
+      /**
+       * 原因是：因為如果沒給初始值，那初始值會被黑認為「第一個項目」
+       * 也就是 { name: 'toyota', age: 10 } 這個 Object
+       * 之後 reduce 再把 age 一個個加進來，看起來像是：
+       * { name: 'toyota', age: 10 } + 15 + 17 + 21 + 19
+       *     ↑ 這傢伙是物件 跟後面的東西相加會變字串
+       * [object Object]15172119 ← 就會全部串在一起了!
+       */
+
+
+      /**
+       * 再一題：找出最大值
+       */
+      function rand() { return ~~(Math.random() * 100) }
+      var list = Array(10).fill(null).map(function() { return rand()});
+      console.warn("清單是一個隨機數字陣列，請使用 reduce 找出最大值");
+      console.log(list);
+
+      /**
+       * 再再一題：
+       * 繼上題的list，請加總所有超過40的數字
+       */
 
     </script>
   </body>
