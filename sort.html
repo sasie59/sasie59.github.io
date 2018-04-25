@@ -11,22 +11,33 @@
       /**
        * 排序依照資料的內容來做升冪排序或降冪排序
        */
-      var list = [4, 5, 2, 1, 3];
-      // 升冪: [1, 2, 3, 4, 5]
-      // 降冪: [5, 4, 3, 2, 1]
-      console.log(list);
-      list.sort();
-      console.warn("升冪排序後");
-      console.log(list);
+      // var list = [4, 5, 2, 1, 3];
+      var list1 = [21, 111, 31, 81, 1];
+      // // 升冪: [1, 2, 3, 4, 5]
+      // // 降冪: [5, 4, 3, 2, 1]
+      // // console.log(list);
+      // // list.sort();
+      // // console.warn("升冪排序後");
+      // // console.log(list);
+      console.log(list1);
+      list1.sort();
+      console.log(list1);
+      // // 沒有按照順序排序 ?
 
-      list = [4, 5, 2, 1, 3];
-      console.warn("重新定義清單", list);
-      list.sort(function(a, b) {
-        return b - a; // a - b 等升排， b - a 等於降排
+      // list = [4, 5, 2, 1, 3];
+      // console.warn("重新定義清單", list);
+      // list.sort(function(a, b) {
+      //   return b - a; // a - b 等升排， b - a 等於降排
+      // });
+      // console.warn("降冪排序後");
+      // console.log(list);
+      var list1 = [21, 111, 31, 81, 1];
+      list1.sort(function(a, b) {
+        return b - a;
       });
-      console.warn("降冪排序後");
-      console.log(list);
+      console.log(list1);
 
+      //
       var stuList = [
         {name: "謝士揚", age: 33},
         {name: "謝士偉", age: 35},
@@ -36,12 +47,16 @@
       ];
       console.warn("定義清單stuList");
       console.table(stuList);
-      // 使用 sort(function(){...}) 可指定某個屬性進行排序
+      // // 使用 sort(function(){...}) 可指定某個屬性進行排序
+      // stuList.sort(function(a, b) {
+      //   return a.age - b.age;
+      // });
       stuList.sort(function(a, b) {
         return a.age - b.age;
       });
-      console.warn("升冪排序後");
       console.table(stuList);
+      // console.warn("升冪排序後");
+      // console.table(stuList);
 
     </script>
   </body>
