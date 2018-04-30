@@ -5,18 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
   </head>
   <body>
+    <button onClick="getData()">抓資料</button>
+    <div id="loading" class="hide">Loading</div>
+    <div id="content">沒資料</div>
+
     <script type="text/javascript">
-      // 使用線上隨機產生 json 的服務
-      // https://jsonplaceholder.typicode.com/
-      fetch('https://jsonplaceholder.typicode.com/users')
-        .then(function(res) {
-          return res.json()
-        })
-        .then(function(json) {
-          console.warn(json);
-        })
+
+      function getData() {
+        // 先把content 內容清空
+        document.getElementById('content').innerHTML = "";
+
+        // loading DOM 預設是隱藏的，把隱藏用的 class 拿掉
+        document.getElementById('loading').classList.remove('hide');
+
+        // 使用線上隨機產生 json 的服務
+        // https://jsonplaceholder.typicode.com/
+        fetch('https://jsonplaceholder.typicode.com/users')
+          .then(function(res) {
+            return res.json()
+          })
+          .then(function(json) { // ← json 就是抓到的資料
+            console.warn(json);  // ← 印出來看看
+
+            // 把 json 資料轉成 DOM 字串 陣列
+            var data2DOM = json.map(function(person) {
+              return (
+                "<div>" +
+                  "<span>"+person.username+"</span> / " +
+                  "<span>"+person.email+"</span>" +
+                "</div>"
+              );
+            });
+
+            // 把 DOM 字串 陣列 join 之後塞進 content
+            document.getElementById('content').innerHTML = data2DOM.join('');
+
+            // loading 再度隱藏
+            document.getElementById('loading').classList.add('hide');
+          })
+      }
     </script>
   </body>
 </html>
