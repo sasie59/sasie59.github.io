@@ -60,7 +60,6 @@
        對 我一開始做 沒放初始值 就一直印出這個結果
        */
 
-
       /**
        * 再一題：找出最大值
        */
@@ -68,8 +67,8 @@
       var list = Array(10).fill(null).map(function() { return rand()});
       console.warn("清單是一個隨機數字陣列，請使用 reduce 找出最大值");
       console.log(list);
-      var result2 = list.reduce(function(max, list) {
-        return Math.max(list);
+      var result2 = list.reduce(function(max, item) {
+        return Math.max(max, item);
       });
       console.log(result2);
 
@@ -77,6 +76,27 @@
        * 再再一題：
        * 繼上題的list，請加總所有超過40的數字
        */
+       var result3 = list.reduce(function(sum, item) {
+         // if (item > 40) {
+         //   return sum + item;
+         // }
+         // else {
+         //   return sum;
+         // }
+
+         return item > 40 ? sum + item: sum;
+         // return sum + (item > 40 && item);
+       }, 0);
+       console.log(result3);
+       /**
+       找出 list 裡的所有奇數
+       */
+       list.reduce(function(single, item) {
+         return item % 2 ? console.log(item): "";
+       }, 0);
+
+
+
 
     </script>
   </body>
