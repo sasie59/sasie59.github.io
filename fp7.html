@@ -95,9 +95,31 @@
          return item % 2 ? console.log(item): "";
        }, 0);
 
+       // 這邊有一個觀念很重要， reduce 是要回傳一個結果用的
+       // 也就是 var XXX = list.reduce(....)
+       // 希望是回傳一個陣列，而不是直接把每個奇數印出來,
+       // 按照這次的寫法，你會把 console.log 給下次的 single
+       // 但是 console.log 並不會回傳東西。
+       // 所以你的 single 其實都沒用到，即使初始值一開始給 0
+       // 也沒用到。
+       // 答案我直接寫在下面：
+       var result4 = list.reduce(function(ans, item) {
+         if(item % 2) {
+           ans.push(item);
+         }
+         return ans;
+       }, []);
+       console.log("找到的奇數為：", result4);
 
-
-
+       // 再來一題：
+       // 清單裡有奇數有偶數，希望遇到奇數就減去，遇到偶數就加，意即
+       // [1, 2, 3, 4] => -1 +2 -3 +4 => 2
+       // 請直接使用 list 變數。
+       // 請注意 ans 一開始就是預設值，之後每次進來是上次 return 的結果
+       var result5 = list.reduce(function(ans, item) {
+         // ...
+       }, 0);
+        console.log("最後加總的結果是：", result5);
     </script>
   </body>
 </html>
