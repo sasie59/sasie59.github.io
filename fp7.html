@@ -91,9 +91,9 @@
        /**
        找出 list 裡的所有奇數
        */
-       list.reduce(function(single, item) {
-         return item % 2 ? console.log(item): "";
-       }, 0);
+       // list.reduce(function(single, item) {
+       //   return item % 2 ? console.log(item): "";
+       // }, 0);
 
        // 這邊有一個觀念很重要， reduce 是要回傳一個結果用的
        // 也就是 var XXX = list.reduce(....)
@@ -117,7 +117,8 @@
        // 請直接使用 list 變數。
        // 請注意 ans 一開始就是預設值，之後每次進來是上次 return 的結果
        var result5 = list.reduce(function(ans, item) {
-         // ...
+         item % 2 ? ans -=  item: ans += item;
+         return ans;
        }, 0);
         console.log("最後加總的結果是：", result5);
     </script>
