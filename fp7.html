@@ -119,8 +119,15 @@
        var result5 = list.reduce(function(ans, item) {
          item % 2 ? ans -=  item: ans += item;
          return ans;
+
+         // 結果是正確的但用法是錯誤的，三元式的用法是：
+         // 變數 = 判斷式 ? 真結果: 假結果
+         // 你的三元式最左邊沒有賦予變數
+         // 其實你的用法比較像是 if
+         // if (...) { 真則執行這邊 } else { 假則執行這邊 }
+         // 請改用正確的三元式再改寫
        }, 0);
-        console.log("最後加總的結果是：", result5);
+       console.log("最後加總的結果是：", result5);
     </script>
   </body>
 </html>
