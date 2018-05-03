@@ -112,13 +112,17 @@
        console.log("找到的奇數為：", result4);
 
        // 再來一題：
+       // var a = 1 + 2;
+       // console.log(a);
+       // console.log(1 + 2);
+
        // 清單裡有奇數有偶數，希望遇到奇數就減去，遇到偶數就加，意即
        // [1, 2, 3, 4] => -1 +2 -3 +4 => 2
        // 請直接使用 list 變數。
        // 請注意 ans 一開始就是預設值，之後每次進來是上次 return 的結果
        var result5 = list.reduce(function(ans, item) {
-         item % 2 ? ans -=  item: ans += item;
-         return ans;
+         return ans + (item % 2 ? -item: +item);
+
 
          // 結果是正確的但用法是錯誤的，三元式的用法是：
          // 變數 = 判斷式 ? 真結果: 假結果
@@ -128,6 +132,7 @@
          // 請改用正確的三元式再改寫
        }, 0);
        console.log("最後加總的結果是：", result5);
+
     </script>
   </body>
 </html>
