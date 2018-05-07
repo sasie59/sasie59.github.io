@@ -62,20 +62,21 @@
         padding-bottom: 20px;
       }
 
-      .position {
+      .position-fixed {
         position: fixed;
         left: 0px;
         right: 0px;
       }
-
-      br {
-        margin-bottom: 100px;
+      .position-fixed + .margin-top {
+        display: inline-block;
+        margin-top: 76px;
       }
+
     </style>
   </head>
   <body>
-    <h2 class="bg-light-green header position">Sasie's website</h2><br>
-    <a href="hotkey.html">快速鍵教學</a>
+    <h2 class="bg-light-green header position-fixed">Sasie's website</h2>
+    <a href="hotkey.html" class="margin-top">快速鍵教學</a>
     <h3>開發系列</h3>
     <ul>
       <li><a href="text.html">文字系列</a></li>
@@ -150,6 +151,7 @@
       <li><span class="tag new">New</span>把 ul 裡的文字改成 15px </li>
       <li><span class="tag new">New</span>li 的行高為 25px</li>
       <li><span class="tag new">New</span>如果視窗寬度小於800，ul底色則改為#eec</li>
+      <li><span class="tag new">New</span>上面挖一個區塊然後裡面塞一個圓圈裡面有圖片，下行加一個h1文字</li>
     </ul>
     <h3>版本控管git系列</h3>
     <ul>
