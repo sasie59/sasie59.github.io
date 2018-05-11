@@ -84,6 +84,14 @@
         line-height: 25px;
         list-style: none;
         margin-left: -20px;
+        /**
+         * ↑ margin-left 設負數是減少對左的外距
+         * 但你打開 Elements 工具列會發現增加距離的不是 li
+         * 而是 ul 的 padding (內距) 影響的
+         * 詳見這截圖： https://imgur.com/a/GthxD3W
+         * 所以與其對 li 下 margin-left 負數
+         * 不如直接對 ul 下 padding-left: x 會來得正確
+         */
       }
 
       ul {
