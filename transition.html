@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+      .box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #000;
+        background-color: lightyellow;
+        transition: all 1s;
+      }
+
+      .bg-red {
+        background-color: red;
+        border-radius: 10px;
+      }
+
+      .bg-green {
+        background-color: green;
+        border-radius: 100%;
+      }
+
+      .bg-pink {
+        background-color: pink;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button class="btn" data-color="red" id="btnRed">點我變紅色</button>
+    <button class="btn" data-color="green" id="btnGreen">點我變綠色</button>
+    <button class="btn" data-color="pink" id="btnPink">點我變粉色</button>
+    <script type="text/javascript">
+      const box = document.getElementsByClassName('box')[0];
+      const btnList = document.getElementsByClassName('btn');
+      for (var i = 0; i < btnList.length; i++) {
+        btnList[i].addEventListener('click', function() {
+          box.className = 'box';
+          box.classList.add('bg-' + this.dataset.color);
+        });
+      }
+
+      // document.getElementById("btnRed").addEventListener('click', function() {
+      //   document.getElementsByClassName('box')[0].className = 'box';
+      //   document.getElementsByClassName('box')[0].classList.add('bg-red');
+      // });
+      //
+      // document.getElementById("btnGreen").addEventListener('click', function() {
+      //   document.getElementsByClassName('box')[0].className = 'box';
+      //   document.getElementsByClassName('box')[0].classList.add('bg-green');
+      // });
+    </script>
+  </body>
+</html>
