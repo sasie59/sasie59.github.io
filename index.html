@@ -4,124 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sasie的個人網站</title>
+    <title>Sasie59的個人網站</title>
+    <link rel="stylesheet" href="home.css">
     <style>
-      .tag {
-        font-size: 12px;
-        padding: 1px 5px;
-        margin-right: 5px;
-        border-radius: 2px;
-      }
-
-      .tag.new {
-        color: white;
-        background-color: rgb(133, 156, 26);
-      }
-
-      .tag.coming {
-        color: white;
-        background-color: rgb(133, 133, 133);
-      }
-
-      .bg-light-green {
-        background-color: rgb(129, 227, 148);
-      }
-
-      .header {
-        margin: 0px;
-        padding: 10px;
-        text-align: center;
-        font-size: 40px;
-      }
-
-      body {
-        margin: 0;
-      }
-
-      a {
-        color: darkgreen;
-        font-size: 13px;
-      }
-
-      a:link {
-        color: blue;
-      }
-
-      a:visited {
-        color: purple;
-      }
-
-      h3 {
-        color: rgb(22, 47, 8);
-        margin-left: 20px;
-      }
-
-      ul {
-        background-color: #ebebeb;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-
-      @media only screen and (max-width: 800px) {
-        ul {
-          background-color: #eec;
-        }
-      }
-
-      .position-fixed {
-        position: fixed;
-        left: 0px;
-        right: 0px;
-      }
-      .position-fixed + .margin-top {
-        display: inline-block;
-        margin-top: 76px;
-      }
-      li {
-        line-height: 25px;
-        list-style: none;
-        /**
-         * ↑ margin-left 設負數是減少對左的外距
-         * 但你打開 Elements 工具列會發現增加距離的不是 li
-         * 而是 ul 的 padding (內距) 影響的
-         * 詳見這截圖： https://imgur.com/a/GthxD3W
-         * 所以與其對 li 下 margin-left 負數
-         * 不如直接對 ul 下 padding-left: x 會來得正確
-         */
-      }
-
-      ul {
-        font-size: 15px;
-        padding-left: 20px;
-      }
-      .profile {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-      }
-      .center {
-        text-align: center;
-      }
-
-      #layout {
-        margin: 0 auto;
-        max-width: 1000px;
-      }
-
     </style>
   </head>
   <body>
     <div id ="layout">
-      <h2 class="bg-light-green header position-fixed">Sasie's website</h2>
-      <a href="hotkey.html" class="margin-top">快速鍵教學</a>
+      <h2 class="bg-light-green header position-fixed">Sasie59's website</h2>
       <div class="center"><img class="profile" src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/10172674_849343961754650_4279312111139382422_n.jpg?_nc_fx=ftpe7-3&_nc_cat=0&_nc_eui2=v1%3AAeFSS-zvyMYzDE09xMQXHyQ_eIlbgY8K2KLju4aoYBU3iFOK8qeMm92S69LrxQfUMHPUHJt77DAu8a9d7xIn8IBDXmDZK35XEPkpGHpkNQ7sVA&oh=7141f5536d1242da6981ad401cc660d6&oe=5B58DDE8" alt="me"></div>
       <h1 class="center">Hi 我是士偉</h1>
       <h3>作業區</h3>
       <ul>
-        <li><span class="tag new">New</span>請把這頁的 style 搬到獨立的 .css 檔再引入</li>
-        <li><span class="tag new">New</span>把 「快速鍵教學」放到整個頁面的最下面</li>
-        <li><span class="tag new">New</span>li 裡的文字大小固定為 15px 不管是否有超連結</li>
-        <li><span class="tag new">New</span>li 設定下框線為 1px, 實線, 顏色為 #ddd</li>
+        <li>請把這頁的 style 搬到獨立的 .css 檔再引入</li>
+        <li>把 「快速鍵教學」放到整個頁面的最下面</li>
+        <li>li 裡的文字大小固定為 15px 不管是否有超連結</li>
+        <li>li 設定下框線為 1px, 實線, 顏色為 #ddd</li>
         <li><span class="tag new">New</span>ul 設定圓角為 10px, 但小於1000後不能有圓角</li>
         <li><a href="work1.html">計算BMI</a></li>
         <li><a href="work2.html">留言版</a></li>
@@ -210,6 +108,7 @@
         <li><a>拉碼(pull)</a></li>
         <li><a>衝突(conflict)</a></li>
       </ul>
+      <a href="hotkey.html" class="margin-top">快速鍵教學</a>
     </div>
   </body>
 </html>

@@ -1,0 +1,112 @@
+.tag {
+  font-size: 12px;
+  padding: 1px 5px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.tag.new {
+  color: white;
+  background-color: rgb(133, 156, 26);
+}
+
+.tag.coming {
+  color: white;
+  background-color: rgb(133, 133, 133);
+}
+
+.bg-light-green {
+  background-color: rgb(129, 227, 148);
+}
+
+.header {
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: darkgreen;
+  font-size: 13px;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+h3 {
+  color: rgb(22, 47, 8);
+  margin-left: 20px;
+}
+
+ul {
+  background-color: #ebebeb;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  ul {
+    background-color: #eec;
+  }
+}
+
+.position-fixed {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+}
+.position-fixed + .profile {
+  display: inline-block;
+  margin-top: 76px;
+}
+li {
+  line-height: 25px;
+  list-style: none;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+  /**
+   * ↑ margin-left 設負數是減少對左的外距
+   * 但你打開 Elements 工具列會發現增加距離的不是 li
+   * 而是 ul 的 padding (內距) 影響的
+   * 詳見這截圖： https://imgur.com/a/GthxD3W
+   * 所以與其對 li 下 margin-left 負數
+   * 不如直接對 ul 下 padding-left: x 會來得正確
+   */
+}
+
+ul {
+  font-size: 15px;
+  padding-left: 20px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000) {
+  ul {
+    border-radius: 0px;
+  }
+}
+/* 為何沒有變成直角? */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 90px;
+}
+.center {
+  text-align: center;
+}
+
+#layout {
+  margin: 0 auto;
+  max-width: 1000px;
+}
