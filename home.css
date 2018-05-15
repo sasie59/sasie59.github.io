@@ -32,8 +32,9 @@ body {
 
 a {
   color: darkgreen;
-  font-size: 13px;
+  font-size: 15px;
 }
+/* 已改為15px */
 
 a:link {
   color: blue;
@@ -90,12 +91,15 @@ ul {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 1000) {
+@media only screen and (max-width: 1000px) {
   ul {
     border-radius: 0px;
   }
+  .header {
+    font-size: 100%;
+  }
 }
-/* 為何沒有變成直角? */
+
 .profile {
   width: 150px;
   height: 150px;
