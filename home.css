@@ -94,11 +94,54 @@ h1:hover i {
   display: none;
 }
 /* 為何要綁兩個標千才起的了作用啊 */
+/**
+ * 你的做法是「當經過h1時把 <i>我是士偉</i> 隱藏起來」
+ * 其實你也可以不用 i 包住，直接使用
+ * h1:hover { display: none; }
+ */
 
 h1:hover:before {
   content: "@I-Lan";
 }
 /* 這用法沒學過 就照字面上來翻 滑鼠移過h1要變不見之前將內文改變為@I-Lan */
+/**
+ * :before 這個關鍵字是新用法，它叫偽類別。
+ * 它會在畫面上產生"新的區塊"但你的程式裡面不用加東西。
+ * ex:
+ * h1:before {
+ *   content: 'Hello';
+ * }
+ *
+ * <h1>
+ *   ::before ← 生出這塊，內容是 Hello
+ *   你好
+ * </h1>
+ *
+ * 所以使用者會直接看到 「Hello 你好」
+ * 但 html 碼裡是看不到 Hello 這個字的
+ * 這用法常用在清單前的特殊符號，以往我們會：
+ * <ul>
+ *   <li><span class="red">★</span>項目1</li>
+ *   <li><span class="red">★</span>項目2</li>
+ *   ...
+ * </ul>
+ *
+ * 但若使用 :before, 你可以這樣:
+ * <ul>
+ *   <li>項目1</li>
+ *   <li>項目2</li>
+ *   ...
+ * </ul>
+ *
+ * CSS:
+ * ul > li:before {
+ *   content: '★';
+ *   color: #f00;
+ * }
+ *
+ * 這就就俐落多了!
+ *
+ */
 li {
   line-height: 25px;
   list-style: none;
